@@ -23,7 +23,7 @@ baner = f'''
 {r}|_| \_|\__,_|_|\_\___{m}|____/ \___/ \__|
 {y}Made by: {g}https://github.com/Sigma-cc'''
 
-
+SPAM_MESSAGE = "Is A Test"
 
 async def delete_all_channel(guild):
     deleted = 0
@@ -145,3 +145,7 @@ while True:
     elif choice == '2':
         print(f'{dr}Exit...')
         exit()
+        @client.event
+async def on_guild_channel_create(channel):
+  while True:
+    await channel.send(random.choice(SPAM_MESSAGE))
