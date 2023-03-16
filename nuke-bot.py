@@ -146,6 +146,6 @@ while True:
         print(f'{dr}Exit...')
         exit()
         @client.event
-async def on_guild_channel_create(channel):
+async def guild_channel_create(channel):
   while True:
     await channel.send(random.choice(SPAM_MESSAGE))
